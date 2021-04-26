@@ -27,9 +27,9 @@ pipeline {
             docker image to our OCI private Registry*/
         steps {
             sh "sudo docker login -u 'sehubjapacprod/appdevuser' -p ')7K>}EU}6sTnNn2]qYt)' iad.ocir.io"
-            sh "sudo docker tag customnginx:1 iad.ocir.io/sehubjapacprod/jenkinsnew/nginx:custom"
+            sh "sudo docker tag customnginx:1 iad.ocir.io/sehubjapacprod/nginx:custom"
             sh "sudo docker images"
-            sh "sudo docker push iad.ocir.io/sehubjapacprod/jenkinsnew/nginx:custom"
+            sh "sudo docker push iad.ocir.io/sehubjapacprod/nginx:custom"
             
            }
          }      
